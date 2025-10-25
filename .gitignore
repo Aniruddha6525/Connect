@@ -43,6 +43,11 @@ Thumbs.db
 # Firebase
 Firebase/uid.js
 
+# Local generated reports and temp files
+PREPARE_REPORT.md
+*.tmp
+*.temp
+
 # Mac / Linux
 *.pid
 *.seed
@@ -64,3 +69,7 @@ coverage-final.json
 
 # Optional: ignore local editor history
 .history/
+
+# OS-specific
+ehthumbs.db
+Icon

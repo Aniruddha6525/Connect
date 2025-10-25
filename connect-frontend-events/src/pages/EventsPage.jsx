@@ -2,39 +2,70 @@ import { useEffect, useState } from 'react';
 import EventsList from '../components/events/EventsList';
 import EventCreateForm from '../components/events/EventCreateForm';
 import EventRegistrations from '../components/events/EventRegistrations';
+import LoadingImg from '../assets/Loading.png';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { api } from '../services/api';
+import EventsImg from '../assets/Events.png';
 
 const EventsPage = () => {
   const [user, setUser] = useState(null);
   const [role, setRole] = useState(null); // student | expert | admin
+  const [events, setEvents] = useState([]);
+  const [webinars, setWebinars] = useState([]);
+  const [dataLoading, setDataLoading] = useState(true);
 
   useEffect(() => {
     const auth = getAuth();
     onAuthStateChanged(auth, async (user) => {
       if (user) {
         setUser(user);
-        // Default role or fetch from API
-        setRole('student'); // Default role
-        
+        setRole('student');
         try {
-          // You can replace this with a fetch to your backend API
-          const response = await fetch(`/api/users/role?id=${user.uid}`);
-          const data = await response.json();
-          if (data && data.role) {
-            setRole(data.role);
-          }
+          const data = await api.get('/api/users/role', { params: { id: user.uid } });
+          if (data && data.role) setRole(data.role);
         } catch (error) {
-          console.error("Error fetching user role:", error);
+          console.error('Error fetching user role:', error);
         }
       }
     });
   }, []);
 
-  if (!user || !role) return <div className="p-4">Loading...</div>;
+  // Fetch events and webinars once (independent of auth). Keep separate loading state.
+  useEffect(() => {
+    const fetchData = async () => {
+      setDataLoading(true);
+      try {
+        const [eventsData, webinarsData] = await Promise.all([
+          api.get('/api/events'),
+          api.get('/api/webinars').catch(() => []),
+        ]);
+        setEvents(eventsData || []);
+        setWebinars(webinarsData || []);
+      } catch (err) {
+        console.error('Error fetching events/webinars:', err);
+      } finally {
+        setDataLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (!user || !role) return (
+    <div className="flex justify-center items-center h-48">
+      <img src={LoadingImg} alt="Loading authentication" className="w-28 sm:w-36 md:w-48 lg:w-56 object-contain" />
+    </div>
+  );
 
   return (
     <div className="p-6 space-y-6">
-      <h1 className="text-2xl font-bold">Webinars & Workshops</h1>
+      <div className="flex justify-center mb-8"> {/* Center the whole block */}
+        <div className="flex items-center space-x-6"> {/* Align items and add space */}
+          <img src={EventsImg} alt="Events" className="w-[250px] h-auto" /> {/* Logo on the left with fixed width */}
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900"> {/* Larger text */}
+            Webinars & Workshops
+          </h1>
+        </div>
+      </div>
 
       {/* Expert/Admin: Create New Event */}
       {(role === 'expert' || role === 'admin') && (
@@ -42,7 +73,7 @@ const EventsPage = () => {
       )}
 
       {/* Student: Register for Events */}
-      {role === 'student' && <EventsList userId={user.uid} />}
+  {role === 'student' && <EventsList userId={user.uid} events={events} webinars={webinars} loading={dataLoading} />}
 
       {/* Expert/Admin: View Registrations */}
       {(role === 'expert' || role === 'admin') && (

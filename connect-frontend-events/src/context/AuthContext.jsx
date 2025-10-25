@@ -18,14 +18,13 @@ export const AuthProvider = ({ children }) => {
         setRole("user");
         
         try {
-          // You can replace this with a fetch to your backend API
-          const response = await fetch(`/api/users/role?email=${firebaseUser.email}`);
-          const data = await response.json();
+          const { api } = await import('../services/api');
+          const data = await api.get('/api/users/role', { params: { id: firebaseUser.uid } });
           if (data && data.role) {
             setRole(data.role);
           }
         } catch (error) {
-          console.error("Error fetching user role:", error);
+          console.error('Error fetching user role:', error);
         }
       } else {
         setRole(null);

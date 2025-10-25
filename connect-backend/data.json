@@ -1,0 +1,256 @@
+{
+  "projects": [
+    {
+      "id": "a1b2c3d4-e5f6-7890-1234-abcdef123450",
+      "title": "AI-Powered Code Review Assistant",
+      "description": "A tool that integrates with GitHub to provide automated code reviews focusing on best practices, security vulnerabilities, and performance bottlenecks using a custom-trained language model.",
+      "techStack": ["Python", "Flask", "Docker", "TypeScript"],
+      "studentId": "user-uuid-01",
+      "createdAt": "2025-08-15T14:30:00Z",
+      "createdBy": "user-uuid-02",
+      "menteeId": null
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-1234-abcdef123451",
+      "title": "Community Garden Management Platform",
+      "description": "A web application for local communities to manage shared garden plots, track planting schedules, and organize volunteer events. Includes a resource sharing feature.",
+      "techStack": ["React", "Next.js", "PostgreSQL", "Prisma"],
+      "studentId": "user-uuid-03",
+      "createdAt": "2025-09-22T11:00:00Z",
+      "createdBy": "user-uuid-03",
+      "menteeId": "user-uuid-04"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-1234-abcdef123452",
+      "title": "Personal Finance Dashboard with Plaid API",
+      "description": "A secure dashboard to aggregate bank accounts, credit cards, and investments using the Plaid API. Provides users with insights into their spending habits and net worth.",
+      "techStack": ["Next.js", "Node.js", "Express", "TypeScript", "PostgreSQL"],
+      "studentId": "user-uuid-05",
+      "createdAt": "2025-07-01T18:45:00Z",
+      "createdBy": "user-uuid-05",
+      "menteeId": null
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-1234-abcdef123453",
+      "title": "Decentralized Social Media Feed",
+      "description": "An experimental social media platform where user data is stored on a decentralized network, giving users full control over their content and privacy. Built with Web3 technologies.",
+      "techStack": ["React", "JavaScript", "GraphQL"],
+      "studentId": "user-uuid-06",
+      "createdAt": "2025-10-05T09:00:00Z",
+      "createdBy": "user-uuid-07",
+      "menteeId": "user-uuid-08"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-1234-abcdef123454",
+      "title": "Real-time Collaborative Whiteboard",
+      "description": "A web-based whiteboard application that allows multiple users to draw, write, and share ideas in real-time. Implemented using WebSockets for low-latency communication.",
+      "techStack": ["React", "Node.js", "Express", "MongoDB"],
+      "studentId": "user-uuid-09",
+      "createdAt": "2025-06-18T20:10:00Z",
+      "createdBy": "user-uuid-09",
+      "menteeId": null
+    }
+  ],
+  "mentorships": [
+    {
+      "mentorId": "mentorship-uuid-01",
+      "studentId": "user-uuid-10",
+      "expertId": "user-uuid-11",
+      "topic": "Web Development",
+      "status": "completed",
+      "createdAt": "2025-01-20T10:00:00Z",
+      "menteeId": "user-uuid-10"
+    },
+    {
+      "mentorId": "mentorship-uuid-02",
+      "studentId": "user-uuid-12",
+      "expertId": "user-uuid-13",
+      "topic": "Data Science",
+      "status": "in_progress",
+      "createdAt": "2025-08-05T16:30:00Z",
+      "menteeId": "user-uuid-12"
+    },
+    {
+      "mentorId": "mentorship-uuid-03",
+      "studentId": "user-uuid-14",
+      "expertId": "user-uuid-15",
+      "topic": "DevOps",
+      "status": "accepted",
+      "createdAt": "2025-09-15T12:00:00Z",
+      "menteeId": "user-uuid-14"
+    },
+    {
+      "mentorId": "mentorship-uuid-04",
+      "studentId": "user-uuid-16",
+      "expertId": "user-uuid-17",
+      "topic": "Career Guidance",
+      "status": "pending",
+      "createdAt": "2025-10-18T11:45:00Z",
+      "menteeId": "user-uuid-16"
+    },
+    {
+      "mentorId": "mentorship-uuid-05",
+      "studentId": "user-uuid-01",
+      "expertId": "user-uuid-11",
+      "topic": "Open Source Contribution",
+      "status": "in_progress",
+      "createdAt": "2025-09-01T09:00:00Z",
+      "menteeId": "user-uuid-01"
+    }
+  ],
+  "events": [
+    {
+      "id": "event-uuid-01",
+      "title": "Resume Building & Review Workshop",
+      "description": "Join our interactive workshop to learn the best practices for creating a standout tech resume. We'll cover formatting, content, and ATS optimization. Participants can submit their resumes for a live review session.",
+      "scheduledAt": "2025-11-15T14:00:00Z",
+      "hostId": "user-uuid-20",
+      "createdAt": "2025-10-10T09:00:00Z",
+      "createdBy": "user-uuid-20"
+    },
+    {
+      "id": "event-uuid-02",
+      "title": "Introduction to System Design Interviews",
+      "description": "This session will break down the fundamentals of system design interviews. We'll discuss common patterns, scalability concepts, and walk through a mock interview problem. Perfect for those preparing for mid-level and senior roles.",
+      "scheduledAt": "2025-11-22T17:00:00Z",
+      "hostId": "user-uuid-21",
+      "createdAt": "2025-10-12T11:30:00Z",
+      "createdBy": "user-uuid-21"
+    },
+    {
+      "id": "event-uuid-03",
+      "title": "Hackathon: Build for Social Good",
+      "description": "A 48-hour virtual hackathon focused on creating technology solutions for non-profits and social causes. Form a team, build a prototype, and present to a panel of judges for a chance to win prizes.",
+      "scheduledAt": "2025-12-05T18:00:00Z",
+      "hostId": "user-uuid-22",
+      "createdAt": "2025-10-20T10:00:00Z",
+      "createdBy": "user-uuid-22"
+    },
+    {
+      "id": "event-uuid-04",
+      "title": "Community Networking Mixer",
+      "description": "An informal virtual event to connect with fellow students, mentors, and industry professionals. Breakout rooms will be available for focused discussions on topics like web development, data science, and career growth.",
+      "scheduledAt": "2025-10-30T19:00:00Z",
+      "hostId": "user-uuid-20",
+      "createdAt": "2025-10-05T15:00:00Z",
+      "createdBy": "user-uuid-20"
+    }
+  ],
+  "eventRegistrations": [
+    { "id": "event-reg-uuid-001", "eventId": "event-uuid-01", "userId": "user-uuid-01", "createdAt": "2025-10-11T10:00:00Z", "menteeId": null },
+    { "id": "event-reg-uuid-002", "eventId": "event-uuid-01", "userId": "user-uuid-03", "createdAt": "2025-10-11T11:15:00Z", "menteeId": null },
+    { "id": "event-reg-uuid-003", "eventId": "event-uuid-01", "userId": "user-uuid-05", "createdAt": "2025-10-12T09:30:00Z", "menteeId": null },
+    { "id": "event-reg-uuid-004", "eventId": "event-uuid-02", "userId": "user-uuid-01", "createdAt": "2025-10-13T14:00:00Z", "menteeId": null },
+    { "id": "event-reg-uuid-005", "eventId": "event-uuid-02", "userId": "user-uuid-06", "createdAt": "2025-10-14T18:20:00Z", "menteeId": null },
+    { "id": "event-reg-uuid-006", "eventId": "event-uuid-02", "userId": "user-uuid-09", "createdAt": "2025-10-15T12:00:00Z", "menteeId": null },
+    { "id": "event-reg-uuid-007", "eventId": "event-uuid-02", "userId": "user-uuid-12", "createdAt": "2025-10-16T13:45:00Z", "menteeId": null },
+    { "id": "event-reg-uuid-008", "eventId": "event-uuid-03", "userId": "user-uuid-15", "createdAt": "2025-10-21T08:00:00Z", "menteeId": null },
+    { "id": "event-reg-uuid-009", "eventId": "event-uuid-04", "userId": "user-uuid-02", "createdAt": "2025-10-06T10:00:00Z", "menteeId": null },
+    { "id": "event-reg-uuid-010", "eventId": "event-uuid-04", "userId": "user-uuid-04", "createdAt": "2025-10-07T16:00:00Z", "menteeId": null }
+  ],
+  "webinars": [
+    {
+      "id": "webinar-uuid-01",
+      "title": "Advanced TypeScript Patterns",
+      "description": "Explore powerful TypeScript features like conditional types, mapped types, and decorators to write more robust and maintainable code.",
+      "dateTime": "2025-11-12T16:00:00Z",
+      "speaker": "Dr. Evelyn Reed",
+      "createdBy": "user-uuid-30",
+      "createdAt": "2025-10-15T10:00:00Z"
+    },
+    {
+      "id": "webinar-uuid-02",
+      "title": "Scaling Your App with Kubernetes",
+      "description": "An introduction to container orchestration with Kubernetes. Learn how to deploy, scale, and manage containerized applications efficiently.",
+      "dateTime": "2025-11-28T15:00:00Z",
+      "speaker": "Alex Chen",
+      "createdBy": "user-uuid-31",
+      "createdAt": "2025-10-20T14:00:00Z"
+    },
+    {
+      "id": "webinar-uuid-03",
+      "title": "Getting Started with GraphQL",
+      "description": "Tired of over-fetching and under-fetching with REST APIs? This webinar covers the basics of GraphQL, including schema definition, queries, and mutations.",
+      "dateTime": "2025-10-29T18:00:00Z",
+      "speaker": "Samantha Carter",
+      "createdBy": "user-uuid-30",
+      "createdAt": "2025-10-08T12:00:00Z"
+    }
+  ],
+  "webinarRegistrations": [
+    { "id": "web-reg-uuid-001", "webinarId": "webinar-uuid-01", "userId": "user-uuid-02", "registeredAt": "2025-10-16T09:00:00Z" },
+    { "id": "web-reg-uuid-002", "webinarId": "webinar-uuid-01", "userId": "user-uuid-04", "registeredAt": "2025-10-17T11:00:00Z" },
+    { "id": "web-reg-uuid-003", "webinarId": "webinar-uuid-02", "userId": "user-uuid-02", "registeredAt": "2025-10-21T10:30:00Z" },
+    { "id": "web-reg-uuid-004", "webinarId": "webinar-uuid-02", "userId": "user-uuid-08", "registeredAt": "2025-10-21T15:00:00Z" },
+    { "id": "web-reg-uuid-005", "webinarId": "webinar-uuid-03", "userId": "user-uuid-10", "registeredAt": "2025-10-09T14:00:00Z" },
+    { "id": "web-reg-uuid-006", "webinarId": "webinar-uuid-03", "userId": "user-uuid-13", "registeredAt": "2025-10-10T19:00:00Z" },
+    { "id": "web-reg-uuid-007", "webinarId": "webinar-uuid-01", "userId": "user-uuid-15", "registeredAt": "2025-10-18T13:00:00Z" }
+  ],
+  "forumPosts": [
+    {
+      "id": "post-uuid-01",
+      "authorId": "user-uuid-40",
+      "title": "Best way to manage state in a large React application?",
+      "content": "Our project is growing and passing props down multiple levels is becoming difficult to manage. We're considering Redux, Zustand, or just using Context API more effectively. What are the pros and cons of each in 2025? Any recommendations for a team that's relatively new to state management libraries?",
+      "createdAt": "2025-10-01T10:00:00Z"
+    },
+    {
+      "id": "post-uuid-02",
+      "authorId": "user-uuid-41",
+      "title": "Struggling with CORS errors in a Node.js/React setup",
+      "content": "I have a React frontend running on localhost:3000 and a Node/Express backend on localhost:5000. I've installed the `cors` package on the backend and used `app.use(cors())`, but I still get CORS errors when my frontend tries to make API calls. What am I missing? Is there a specific configuration I need for credentials or headers?",
+      "createdAt": "2025-10-12T15:30:00Z"
+    },
+    {
+      "id": "post-uuid-03",
+      "authorId": "user-uuid-42",
+      "title": "Is Django or Flask better for a new project?",
+      "content": "I'm starting a new web application and can't decide between Django and Flask. I've heard Django is 'batteries-included' but can be rigid, while Flask is more flexible but requires more setup. The project is a simple content management system. Which framework would be a better choice for faster development and easier maintenance?",
+      "createdAt": "2025-09-25T11:20:00Z"
+    }
+  ],
+  "forumReplies": [
+    {
+      "id": "reply-uuid-001",
+      "postId": "post-uuid-01",
+      "authorId": "user-uuid-25",
+      "content": "For a team new to state management, I'd highly recommend Zustand. The boilerplate is minimal compared to Redux, and the API is very intuitive and based on hooks. You'll be productive much faster.",
+      "createdAt": "2025-10-01T11:05:00Z"
+    },
+    {
+      "id": "reply-uuid-002",
+      "postId": "post-uuid-01",
+      "authorId": "user-uuid-26",
+      "content": "I agree with the Zustand suggestion. Also, don't underestimate the built-in Context API combined with `useReducer`. For many cases, it's powerful enough and doesn't add another dependency to your project.",
+      "createdAt": "2025-10-01T14:20:00Z"
+    },
+    {
+      "id": "reply-uuid-003",
+      "postId": "post-uuid-02",
+      "authorId": "user-uuid-27",
+      "content": "Have you tried specifying the origin in the CORS options? For example: `app.use(cors({ origin: 'http://localhost:3000' }))`. Sometimes the default wildcard doesn't work as expected, especially if you're sending credentials.",
+      "createdAt": "2025-10-12T15:45:00Z"
+    },
+    {
+      "id": "reply-uuid-004",
+      "postId": "post-uuid-02",
+      "authorId": "user-uuid-41",
+      "content": "That was it! Specifying the origin directly fixed the issue. Thank you so much!",
+      "createdAt": "2025-10-12T16:00:00Z"
+    },
+    {
+      "id": "reply-uuid-005",
+      "postId": "post-uuid-03",
+      "authorId": "user-uuid-28",
+      "content": "For a CMS, Django is almost always the better choice. The built-in admin panel, ORM, and authentication system will save you hundreds of hours of work. The 'rigidity' is actually a feature that enforces good practices.",
+      "createdAt": "2025-09-25T13:00:00Z"
+    },
+    {
+      "id": "reply-uuid-006",
+      "postId": "post-uuid-03",
+      "authorId": "user-uuid-29",
+      "content": "I'd go with Django. You can build a solid MVP with a fully functional admin interface in a single afternoon.",
+      "createdAt": "2025-09-26T09:10:00Z"
+    }
+  ]
+}

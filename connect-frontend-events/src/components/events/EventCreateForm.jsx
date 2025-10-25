@@ -1,8 +1,11 @@
+import { useState } from 'react';
+import { api } from '../../services/api';
+
 const EventCreateForm = ({ hostId }) => {
   const [form, setForm] = useState({
     title: '',
     description: '',
-    scheduled_at: ''
+    scheduledAt: ''
   });
 
   const handleChange = (e) => {
@@ -11,14 +14,20 @@ const EventCreateForm = ({ hostId }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const payload = { ...form, host_id: hostId };
-    const res = await fetch('http://localhost:5000/api/events', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    const data = await res.json();
-    alert('Event created!');
+    // send in flexible keys the backend accepts
+    const payload = {
+      title: form.title,
+      description: form.description,
+      scheduled_at: form.scheduledAt,
+      hostId: hostId,
+    };
+    try {
+      await api.post('/api/events', { body: payload });
+      alert('Event created!');
+    } catch (err) {
+      console.error('Failed to create event', err);
+      alert('Failed to create event');
+    }
   };
 
   return (

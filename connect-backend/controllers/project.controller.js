@@ -1,6 +1,5 @@
-// TODO: Add Prisma client when database schema is ready
-// import { PrismaClient } from '@prisma/client';
-// const prisma = new PrismaClient();
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
 
 export const createProject = async (req, res) => {
   const { title, description, tech_stack, student_id } = req.body;
@@ -10,43 +9,36 @@ export const createProject = async (req, res) => {
     return res.status(400).json({ error: "Missing or invalid project data." });
   }
 
-  const data = await prisma.projects
-    .from('projects')
-    .insert([{ title, description, tech_stack, student_id }])
-    .select();
-
-  if (error) {
-    return res.status(500).json({ error: error.message });
-  }
-
-  res.status(201).json(data);
+    try {
+      const project = await prisma.project.create({
+        data: {
+          title,
+          description,
+          techStack: tech_stack,
+          studentId: student_id,
+          createdBy: student_id,
+        },
+      });
+      return res.status(201).json(project);
+    } catch (error) {
+      console.error('createProject error:', error);
+      return res.status(500).json({ error: 'Internal server error' });
+    }
 };
 
 
 export const getProjects = async (req, res) => {
   const { student_id } = req.query;
 
-  let query = prisma.projects
-    .from('projects')
-    .select(`
-      id,
-      title,
-      description,
-      tech_stack,
-      created_at,
-      student:users (id, full_name, email)
-    `)
-    .order('created_at', { ascending: false });
-
-  if (student_id) {
-    query = query.eq('student_id', student_id);
+  try {
+    const where = student_id ? { studentId: student_id } : {};
+    const projects = await prisma.project.findMany({
+      where,
+      orderBy: { createdAt: 'desc' },
+    });
+    return res.status(200).json(projects);
+  } catch (error) {
+    console.error('getProjects error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
-
-  const { data, error } = await query;
-
-  if (error) {
-    return res.status(500).json({ error: error.message });
-  }
-
-  res.status(200).json(data);
 };

@@ -1,17 +1,36 @@
 
 import { useEffect, useState } from 'react';
+import { api } from '../../services/api';
+import LoadingImg from '../../assets/Loading.png';
 
 const EventRegistrations = ({ eventId }) => {
   const [registrations, setRegistrations] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchRegs = async () => {
-      const res = await fetch(`http://localhost:5000/api/events/${eventId}/registrations`);
-      const data = await res.json();
-      setRegistrations(data);
+      if (!eventId) return setLoading(false);
+      setLoading(true);
+      try {
+        const data = await api.get(`/api/events/${eventId}/registrations`);
+        setRegistrations(data || []);
+      } catch (err) {
+        console.error('Failed to fetch registrations', err);
+        setError(err.message || 'Failed to load registrations');
+      } finally {
+        setLoading(false);
+      }
     };
-    if (eventId) fetchRegs();
+    fetchRegs();
   }, [eventId]);
+
+  if (loading) return (
+    <div className="p-4 flex justify-center">
+      <img src={LoadingImg} alt="Loading registrations" className="w-28 sm:w-36 md:w-48 lg:w-56 object-contain" />
+    </div>
+  );
+  if (error) return <div className="p-4 text-red-500">Error: {error}</div>;
 
   return (
     <div className="p-4">
@@ -19,7 +38,7 @@ const EventRegistrations = ({ eventId }) => {
       <ul>
         {registrations.map((r) => (
           <li key={r.id} className="border-b p-2">
-            {r.users?.full_name} ({r.users?.email})
+            {r.user?.fullName || r.user?.full_name || 'Unknown'} ({r.user?.email || 'no-email'})
           </li>
         ))}
       </ul>
