@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { api } from '../../services/api';
-import LoadingImg from '../../assets/Loading.png';
+const LoadingImg = '/images/Loading.png';
 
 function Feedback() {
   const [projects, setProjects] = useState([]);

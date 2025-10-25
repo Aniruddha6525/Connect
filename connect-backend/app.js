@@ -12,7 +12,17 @@ import mentorshipRoutes from './routes/mentorship.routes.js';
 import webinarRoutes from './routes/webinar.routes.js';
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://connect-ruddy-five.vercel.app", // ✅ Vercel deployed site
+      "http://localhost:5173",                 
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE","PATCH", "OPTIONS"],
+    credentials: true, 
+  })
+);
+
 app.use(express.json());
 
 // app.use('/api/forums', forumRoutes);

@@ -1,5 +1,5 @@
 // Simple API helper for the frontend. Uses Vite env var VITE_API_BASE if set.
-const API_BASE = import.meta.env.VITE_API_BASE || '';
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
 
 function buildUrl(path, params) {
   const url = new URL((API_BASE + path), window.location.origin);

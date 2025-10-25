@@ -42,7 +42,6 @@ const ContactPage = () => {
     // --- Placeholder for actual form submission logic ---
     // Example: Send data to an API endpoint
     console.log('Form data submitted:', formData);
-    // Replace console.log with fetch() or axios post request
     
     // Simulate successful submission
     setIsSubmitted(true);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import LoadingImg from '../assets/Loading.png';
+const LoadingImg = '/images/Loading.png';
 
 const HomePage = ({ userRole, user }) => {
   // This check is mostly handled by your ProtectedRoute, but it's good for safety.
