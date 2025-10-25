@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoImage from '../assets/Toggle.png';
+const logoImage = '/images/Toggle.png';
 
 const TermsOfServicePage = () => {
 	const lastUpdated = 'October 25, 2025';

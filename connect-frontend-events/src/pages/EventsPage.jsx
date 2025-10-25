@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 import EventsList from '../components/events/EventsList';
 import EventCreateForm from '../components/events/EventCreateForm';
 import EventRegistrations from '../components/events/EventRegistrations';
-import LoadingImg from '../assets/Loading.png';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { api } from '../services/api';
-import EventsImg from '../assets/Events.png';
+
+const LoadingImg = '/images/Loading.png';
+const EventsImg = '/images/Events.png';
 
 const EventsPage = () => {
   const [user, setUser] = useState(null);

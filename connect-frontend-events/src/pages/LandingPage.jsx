@@ -1,9 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import innovationImage from '../assets/Innovation-amico.png';
-import onlineWorldImage from '../assets/online-world-amico.png';
-import AnimatedConnectedWorldSVG from '../components/AnimatedConnectedWorldSVG';
+// import AnimatedConnectedWorldSVG from '../components/AnimatedConnectedWorldSVG';
+const onlineWorldImage = '/images/Online-World.png';
 
 const FeatureIcon = ({ children }) => (
   <div className="bg-orange-100 text-orange-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">{children}</div>
@@ -93,8 +92,8 @@ const LandingPage = () => {
             {/* --- Column 2: Animated SVG --- */}
             {/* Replaced <img> with the new component */}
             <div className="flex justify-center items-center space-x-6">
-              <AnimatedConnectedWorldSVG />
-              <img src={innovationImage} alt="Innovation" className="hidden md:block w-64 h-auto" />
+              {/* <AnimatedConnectedWorldSVG /> */}
+              <img src="/images/Innovation-amico.png" alt="Innovation" className="hidden md:block w-3/4 h-auto" />
             </div>
 
           </div>

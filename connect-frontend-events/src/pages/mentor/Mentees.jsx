@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { api } from '../../services/api';
-import LoadingImg from '../../assets/Loading.png';
+const LoadingImg = '/images/Loading.png';
 
 function Mentees() {
   const [user, setUser] = useState(null);

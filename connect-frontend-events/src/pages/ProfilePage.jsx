@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { getAuth } from 'firebase/auth';
 // Removed theme import
-// import LoadingImg from '../assets/Loading.png'; // We'll use a CSS spinner instead
+
+const profile = '/images/Profile-Interface.png';
+const UpdateImg = '/images/Update.png';
 import { api } from '../services/api';
-import profile from '../assets/Profile-Interface.png';
-import UpdateImg from '../assets/Update.png';
 
 // --- Standard Logo Component --- (Include this or import it)
 const Logo = ({ src, alt = "Company Logo", className = "h-16 w-auto" }) => (

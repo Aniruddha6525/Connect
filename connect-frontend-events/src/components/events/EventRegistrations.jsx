@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { api } from '../../services/api';
-import LoadingImg from '../../assets/Loading.png';
+const LoadingImg = '/images/Loading.png';
 
 const EventRegistrations = ({ eventId }) => {
   const [registrations, setRegistrations] = useState([]);

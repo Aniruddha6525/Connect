@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Optional: for back links
-import ContactUs from '../assets/ContactUs.png';
+const ContactUs = '/images/ContactUs.png';
 
 // Simple icon components (You can replace these with actual icons from libraries like react-icons)
 const MailIcon = () => (

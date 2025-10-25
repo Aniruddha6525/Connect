@@ -31,7 +31,7 @@ import Webinars from './pages/mentee/Webinars';
 import Community from './pages/mentee/Community';
 
 import ProfilePage from './pages/ProfilePage';
-import LoadingImg from './assets/Loading.png';
+const LoadingImg = '/images/Loading.png';
 
 function App() {
   const [user, setUser] = useState(null);

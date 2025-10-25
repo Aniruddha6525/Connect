@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { api } from '../../services/api';
-import LoadingImg from '../../assets/Loading.png';
+const LoadingImg = '/images/Loading.png';
 
 const EventsList = ({ userId, events: eventsProp, webinars: webinarsProp, loading: propLoading }) => {
   const [events, setEvents] = useState(eventsProp || []);

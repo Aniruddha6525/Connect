@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../services/firebase';
 import { useNavigate, Link } from 'react-router-dom';
 import { api } from '../services/api';
-import SignUpImg from '../assets/SignUp.png';
+const SignUpImg = '/images/SignUp.png';
 
 const Logo = ({ src, alt = 'Company Logo', className = 'h-16 w-auto' }) => (
 	<img src={SignUpImg} alt={alt} className={`inline-block ${className}`} />

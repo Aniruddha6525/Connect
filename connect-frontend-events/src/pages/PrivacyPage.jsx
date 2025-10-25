@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import privacyImg from '../assets/PrivacyPolicy.png';
+const privacyImg = '/images/PrivacyPolicy.png';
 
 const PrivacyPage = () => {
   const lastUpdated = 'October 25, 2025';
