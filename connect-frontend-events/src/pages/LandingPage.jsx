@@ -2,7 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import AnimatedConnectedWorldSVG from '../components/AnimatedConnectedWorldSVG';
-const onlineWorldImage = '/images/Online-World.png';
+const onlineWorldImage = '/images/Online-world-amico.png';
+
 
 const FeatureIcon = ({ children }) => (
   <div className="bg-orange-100 text-orange-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">{children}</div>
