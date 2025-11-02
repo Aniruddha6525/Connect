@@ -2,6 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import AnimatedConnectedWorldSVG from '../components/AnimatedConnectedWorldSVG';
+import TestimonialCard from '../components/TestimonialCard';
+
 const onlineWorldImage = '/images/Online-world-amico.png';
 
 
@@ -22,23 +24,6 @@ const TrackCard = ({ title, description, icon }) => (
   </div>
 );
 
-const TestimonialCard = ({ quote, name, role, initials }) => (
-  <div className="bg-white p-8 rounded-xl shadow-lg relative overflow-hidden">
-    <svg className="absolute top-4 right-4 w-24 h-24 text-gray-100 opacity-80 z-0 transform -rotate-12" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z" />
-    </svg>
-    <div className="relative z-10">
-      <p className="text-lg text-gray-700 italic mb-6">"{quote}"</p>
-      <div className="flex items-center">
-        <span className="h-12 w-12 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-semibold text-xl">{initials}</span>
-        <div className="ml-4">
-          <p className="font-semibold text-gray-900">{name}</p>
-          <p className="text-sm text-orange-600 font-medium">{role}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 
 const LandingPage = () => {
@@ -91,7 +76,6 @@ const LandingPage = () => {
             </div>
 
             {/* --- Column 2: Animated SVG --- */}
-            {/* Replaced <img> with the new component */}
             <div className="flex justify-center items-center space-x-6">
               {/* <AnimatedConnectedWorldSVG /> */}
               <img src="/images/Innovation-amico.png" alt="Innovation" className="hidden md:block w-3/4 h-auto" />
@@ -104,8 +88,6 @@ const LandingPage = () => {
       
       {/* --- Features Section --- */}
       <section className="relative bg-white py-24 sm:py-32 overflow-hidden">
-        {/* ... (rest of your file) ... */}
-        {/* (No changes below this point) */}
         
         {/* Subtle Dot-Grid Background */}
         <div className="absolute inset-0 w-full h-full bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] opacity-20 -z-10" />
@@ -280,9 +262,9 @@ const LandingPage = () => {
             {/* Testimonial 1 */}
             <TestimonialCard
               quote="Finding a mentor in my niche seemed impossible. Connect matched me with a senior engineer in just one day. It's been a game-changer for my career."
-              name="Parthavi G."
-              initials="PG"
-              role="Mentee, Software Engineering"
+              name="Makrand S K."
+              initials="MSK"
+              role="Mentor, Software Engineering"
             />
             
             {/* Testimonial 2 */}

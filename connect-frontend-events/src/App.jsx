@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import Navbar from './components/Navbar';
 import EventsPage from './pages/EventsPage';
@@ -14,6 +15,7 @@ import LandingPage from './pages/LandingPage';
 import RoleProtectedRoute from './components/RoleProtectedRoute';
 import TermsOfServicePage from './pages/TermsOfServicePage';
 import PrivacyPage from './pages/PrivacyPage';
+import GlobalCommunityPage from './pages/GlobalCommunityPage';
 
 // Layout
 import DashboardLayout from './layouts/DashboardLayout';
@@ -32,6 +34,7 @@ import Community from './pages/mentee/Community';
 
 import ProfilePage from './pages/ProfilePage';
 const LoadingImg = '/images/Loading.png';
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -97,6 +100,7 @@ function App() {
   <Route path="/contact" element={<Contact />} />
   <Route path="/terms" element={<TermsOfServicePage />} />
   <Route path="/privacy" element={<PrivacyPage />} />
+  <Route path="/global-community" element={<GlobalCommunityPage />} />  
 
         {/* --- Authentication Routes --- */}
         <Route path="/login" element={<Login />} />
